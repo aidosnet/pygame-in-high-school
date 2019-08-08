@@ -3,6 +3,7 @@ __author__ = "Maurizio Boscaini, maurizio.boscaini@gmail.com"
 __date__ = "$July 29, 2019$"
 __version__ = "1.0"
 
+import os
 from random import randint
 import pygame
 from pygame.locals import *

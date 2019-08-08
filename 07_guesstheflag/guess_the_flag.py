@@ -114,7 +114,7 @@ def main():
     '''Game main function'''
     os.environ['SDL_VIDEO_CENTERED'] = '1'  # To center the window, before we initialize pygame
     pygame.init()
-    screen = pygame.display.set_mode(SIZE, FULLSCREEN)
+    screen = pygame.display.set_mode(SIZE) #, FULLSCREEN)
     pygame.display.set_caption("Guess the flag")
     font1 = pygame.font.Font(None, 30)
     font2 = pygame.font.Font(None, 40)

@@ -174,6 +174,7 @@ def main():
                     enemies.add(Enemy())
             elif event.type == KEYDOWN:
                 if event.unicode == 'q' or event.key == K_ESCAPE:
+                    pygame.quit()
                     return # Game over
                 elif event.unicode == 'f':
                     pygame.display.toggle_fullscreen()
@@ -184,6 +185,7 @@ def main():
 
         # Collisions detection
         if pygame.sprite.groupcollide(enemies, players, 0, 1):
+            pygame.quit()
             return  # Game over
         elif pygame.sprite.spritecollide(player, cherries, 1):
             score += 1
