@@ -54,7 +54,7 @@ class Grid:
         for row in range(self.rows):
             for col in range(self.cols):
                 neighbours = (  (row-1, col-1), (row-1, col), (row-1, col+1),
-                                (row, col-1), (row, col), (row, col+1),
+                                (row, col-1), (row, col+1),
                                 (row+1, col-1), (row+1, col), (row+1, col+1) )
                 cell = self.grid[row][col]
                 next_cell = next_grid[row][col]
@@ -62,7 +62,7 @@ class Grid:
 
                 for neighbour in neighbours:
                     if self.is_valid(neighbour):
-                        count += self.grid[neighbour[0]][neighbour[1]].state;
+                        count += self.grid[neighbour[0]][neighbour[1]].state
 
                 if cell.state and (count < 2 or count > 3):
                     next_cell.state = 0  # Cell dies for starvation or overpopulation
